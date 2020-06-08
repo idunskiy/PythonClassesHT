@@ -60,8 +60,9 @@ class lazy_object:
     def __setattr__(self, name, value):
         if name == 'reset' and value == 1:
             self.__dict__['obj'] = None
-        self.initObj()
-        (self.obj, name, value)
+        else:
+            self.initObj()
+            setattr(self.obj, name, value)
 
     def __len__(self):
         self.initObj()

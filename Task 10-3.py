@@ -28,8 +28,10 @@ class Plane(Vehicle):
     def are_free_seats(self, seats_number):
         if seats_number > self.seats_max:
             print(f'There are no free seats in {self.model} airplane')
+            return False
         else:
             print(f'There are {self.seats_max-seats_number} free seats in {self.model} airplane')
+            return True
 
 
 train = Train('High-speed train', 'KW-34', 42, 30)
