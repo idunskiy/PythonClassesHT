@@ -35,3 +35,5 @@ result = get_logger()
 result.append(42)
 
 print(result)
+
+help(get_logger)
